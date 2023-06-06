@@ -31,7 +31,8 @@ const filteringArrayGreaterThan10_3 = numberArray.filter(number => number > 10)
 const greaterThan10_3 = document.getElementById('element-greater-than-10-3');
 greaterThan10_3.innerHTML = filteringArrayGreaterThan_10_2;
 
-//Tinh tong Cach 1: dung for
+//Tinh tong 
+//Cach 1: dung for
 let sum = 0;
 for (let i = 0; i < numberArray.length; i++){
     sum += numberArray[i];
@@ -52,6 +53,11 @@ const sumArray2 = document.getElementById('sum-array-2');
 sumArray2.innerHTML = sum;
 
 
+//Cach 2: dung reduce + arrowfunction
+sum = 0
+sum = numberArray.reduce((sumBefore, number) => sumBefore + number, 0)
+const sumArray3 = document.getElementById('sum-array-3');
+sumArray3.innerHTML = sum;
 //Nhan 2 gia tri trong mang
 //Cach 1: dung for
 const doubleValueList = []
@@ -71,6 +77,13 @@ function mapDoubleValue(value){
 const doubleValueList2 = numberArray.map(mapDoubleValue)
 const doubleValuesElement2 = document.getElementById('double-value-2');
 doubleValuesElement2.innerHTML = doubleValueList2
+
+//Cach 2 dung arrow function
+
+
+const doubleValueList3 = numberArray.map((number) => number * 2);
+const doubleValuesElement3 = document.getElementById('double-value-3');
+doubleValuesElement3.innerHTML = doubleValueList3
 
 
 //Join  2 mang. Cach 1: dung for add tung phan tu
@@ -107,6 +120,7 @@ joinArrayElement_2.innerHTML = arrayAfterJoin2
 const arrayAfterJoin3 = [...numberArray, ...numberArray2]
 const joinArrayElement_3 = document.getElementById('join-array-3');
 joinArrayElement_3.innerHTML = arrayAfterJoin3
+
 //Them 1 attribute cho 1 object
 //tao class User voi 3 thuoc tinh: email, username, phone
 
