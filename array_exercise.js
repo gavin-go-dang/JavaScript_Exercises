@@ -112,14 +112,26 @@ joinArrayElement_1.innerHTML = arrayAfterJoin
 //Join  2 mang. Cach 2: Dung concat()
 
 const arrayAfterJoin2 = numberArray.concat(numberArray2)
+
 const joinArrayElement_2 = document.getElementById('join-array-2');
 joinArrayElement_2.innerHTML = arrayAfterJoin2
 
 //Join  2 mang. Cach 3: spread operator
 
 const arrayAfterJoin3 = [...numberArray, ...numberArray2]
+
 const joinArrayElement_3 = document.getElementById('join-array-3');
 joinArrayElement_3.innerHTML = arrayAfterJoin3
+
+//Join  2 mang. Cach 4: arrow function
+const arrayAfterJoin4 = numberArray2.reduce((array, element) => 
+        {array.push(element);
+        return array}, 
+    numberArray);
+
+const joinArrayElement_4 = document.getElementById('join-array-4');
+joinArrayElement_4.innerHTML = arrayAfterJoin4
+
 
 //Them 1 attribute cho 1 object
 //tao class User voi 3 thuoc tinh: email, username, phone
